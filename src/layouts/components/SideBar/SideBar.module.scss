@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .item {
+        padding: 12px 0;
+        border-bottom: 1px solid gray;
+        color: black;
+        font-size: 20px;
+        font-weight: 500;
+
+        &:hover {
+            color: gray;
+            animation: indent 0.3s linear forwards;
+        }
+
+        @keyframes indent {
+            to {
+                transform: translateX(12px);
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    background-image: linear-gradient(95.2deg, rgba(173, 252, 234, 1) 26.8%, rgba(192, 229, 246, 1) 64%);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    overflow-y: auto;
+    border-radius: 4px;
+    height: 160px;
+    position: relative;
+
+    @keyframes hover-scale {
+        25% {
+            transform: translateY(-2px);
+        }
+        50% {
+            transform: translateY(-4px);
+        }
+        100% {
+            transform: translateY(-8px);
+        }
+    }
+
+    &:hover {
+        animation: hover-scale 0.25s ease-in forwards;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+
+    .wrapper-img {
+        display: flex;
+        width: 100px;
+        align-items: center;
+        justify-content: center;
+
+        .img {
+            border-radius: 5px;
+            height: 100%;
+            -o-object-fit: contain;
+            object-fit: contain;
+            width: 80px;
+        }
+    }
+
+    .content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        left: 100px;
+        height: 100%;
+        padding: 12px;
+        border-left: 4px solid;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(to right bottom, #6a5af9, #f62682);
+
+        .name {
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            color: black;
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+
+            .salary {
+                font-size: 0.7rem;
+                padding: 6px 8px;
+                margin-left: 8px;
+            }
+        }
+
+        .company {
+            font-size: 12px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            color: black;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            padding: 6px 8px;
+
+            .location-icon {
+                font-size: 10px;
+                margin-right: 4px;
+            }
+
+            .location-title {
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+    }
+}

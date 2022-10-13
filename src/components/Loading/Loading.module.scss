@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+
+    .label {
+        font-size: 1.6rem;
+        font-weight: 700;
+        background: linear-gradient(to right, #5a3f37, #2c7744);
+        background-clip: text;
+        color: transparent;
+        margin-right: 18px;
+    }
+}
