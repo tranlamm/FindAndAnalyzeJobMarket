@@ -5,7 +5,6 @@ import { actions } from '~/redux/reducers/jobSlice';
 function* fetchAllJobsSaga() {
     try {
         const { data } = yield call(api.fetchAllJobs);
-        console.log(data);
         yield put(actions.getAllJobsSuccess(data));
     } catch (error) {
         yield put(actions.getAllJobsFailure(error));

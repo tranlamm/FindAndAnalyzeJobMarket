@@ -24,7 +24,7 @@ function Header() {
                         <Nav.Link as={NavLink} to={routes.home}>
                             Home
                         </Nav.Link>
-                        <Nav.Link as={NavLink} to={routes.mainAnalysis}>
+                        <Nav.Link as={NavLink} to={routes.locationAnalysis}>
                             Analysis
                         </Nav.Link>
                     </Nav>

@@ -23,7 +23,14 @@ function JobItem({ data }) {
                         </Badge>
                     </div>
                     <span className={cx('company')}>{data.company}</span>
-                    <Badge pill bg="secondary" className={cx('location')}>
+                    <div className={cx('skill')}>
+                        {data.itemSkills.map((skill, index) => (
+                            <Badge key={index} pill bg="success" className={cx('item')}>
+                                {skill}
+                            </Badge>
+                        ))}
+                    </div>
+                    <Badge pill bg="primary" className={cx('location')}>
                         <FontAwesomeIcon icon={faLocationDot} className={cx('location-icon')}></FontAwesomeIcon>
                         <span className={cx('location-title')}>{data.location}</span>
                     </Badge>

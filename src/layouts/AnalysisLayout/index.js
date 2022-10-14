@@ -3,6 +3,7 @@ import styles from './AnalysisLayout.module.scss';
 
 import Header from '~/layouts/components/Header';
 import SideBar from '~/layouts/components/SideBar';
+import SideBarCanvas from '~/components/Offcanvas';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -14,12 +15,15 @@ function AnalysisLayout({ children }) {
         <div className="d-flex flex-column">
             <Header></Header>
             <Container className={cx('wrapper')}>
+                <div className={cx('more-btn')}>
+                    <SideBarCanvas className="d-block d-md-none"></SideBarCanvas>
+                </div>
                 <Row>
-                    <Col lg={4} md={3} xs={2}>
+                    <Col md={3} className="d-none d-md-block">
                         <SideBar></SideBar>
                     </Col>
 
-                    <Col lg={8} md={9} xs={10}>
+                    <Col md={9} xs={12}>
                         {children}
                     </Col>
                 </Row>

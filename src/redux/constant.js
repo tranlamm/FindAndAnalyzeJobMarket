@@ -3,5 +3,6 @@ export const INIT_STATE = {
         data: [],
         allData: {},
         isLoading: false,
+        analyzeLoading: false,
     },
 };

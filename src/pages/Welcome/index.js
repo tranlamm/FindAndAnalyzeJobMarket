@@ -61,8 +61,18 @@ function Welcome() {
                         VietNam
                     </p>
                     <p>
-                        Reference website: <a href="https://topdev.vn/">https://topdev.vn</a>,{' '}
-                        <a href="https://topdev.vn/">https://www.topcv.vn</a>
+                        Reference website:{' '}
+                        <a target="_blank" rel="noopener noreferrer" href="https://topdev.vn/">
+                            https://topdev.vn
+                        </a>
+                        ,{' '}
+                        <a target="_blank" rel="noopener noreferrer" href="https://topdev.vn/">
+                            https://www.topcv.vn
+                        </a>
+                        ,{' '}
+                        <a target="_blank" rel="noopener noreferrer" href="https://topdev.vn/">
+                            https://www.careerlink.vn
+                        </a>
                     </p>
                     <Button variant="success" size="lg" as={NavLink} to={routes.home} className={cx('btn')}>
                         Get Started

@@ -1,7 +1,9 @@
 const routes = {
-    home: '/home',
-    mainAnalysis: '/analysis/main',
     welcome: '/',
+    home: '/home',
+    locationAnalysis: '/analysis/main',
+    careerAnalysis: '/analysis/career',
+    jobAnalysis: '/analysis/job',
 };
 
 export default routes;

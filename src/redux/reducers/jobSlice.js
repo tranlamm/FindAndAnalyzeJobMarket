@@ -17,14 +17,14 @@ export const jobSlice = createSlice({
             state.isLoading = false;
         },
         getAllJobsRequest: (state) => {
-            state.isLoading = true;
+            state.analyzeLoading = true;
         },
         getAllJobsSuccess: (state, action) => {
-            state.isLoading = false;
+            state.analyzeLoading = false;
             state.allData = action.payload;
         },
         getAllJobsFailure: (state, action) => {
-            state.isLoading = false;
+            state.analyzeLoading = false;
         },
         getSearchJobsRequest: (state) => {
             state.isLoading = true;

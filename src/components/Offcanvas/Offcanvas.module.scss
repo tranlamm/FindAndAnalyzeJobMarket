@@ -1,0 +1,26 @@
+.title {
+    font-weight: 400;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+
+    .link {
+        border-bottom: 1px solid black;
+        &:nth-child(1) {
+            border-top: 1px solid black;
+        }
+
+        padding: 24px 32px;
+        background-color: rgb(196, 195, 195);
+
+        .item {
+            color: black;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+}
