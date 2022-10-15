@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import routes from '~/configs/routes';
 import classNames from 'classnames/bind';
 import styles from './Offcanvas.module.scss';
@@ -20,7 +20,7 @@ function SideBarCanvas({ className }) {
     return (
         <div className={className}>
             <Button variant="outline-dark" onClick={handleShow}>
-                <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
+                <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
             </Button>
 
             <Offcanvas show={show} onHide={handleClose}>

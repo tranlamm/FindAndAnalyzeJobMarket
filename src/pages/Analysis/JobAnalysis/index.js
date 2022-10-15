@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Line } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto';
 
 import classNames from 'classnames/bind';
@@ -32,10 +32,11 @@ function CareerAnalysis() {
                     <>
                         <h3 className="text-center mb-4">Phân tích dựa trên công việc tuyển dụng</h3>
                         <div className={cx('canvas-container')}>
-                            <Line
+                            <Bar
                                 data={chartData}
                                 options={{
                                     maintainAspectRatio: false,
+                                    legend: { display: false },
                                 }}
                             />
                         </div>
