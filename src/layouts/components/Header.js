@@ -22,7 +22,7 @@ function Header() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto" navbarScroll>
                         <Nav.Link as={NavLink} to={routes.home}>
-                            Home
+                            Find Job
                         </Nav.Link>
                         <Nav.Link as={NavLink} to={routes.locationAnalysis}>
                             Analysis

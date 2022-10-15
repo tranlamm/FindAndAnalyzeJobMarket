@@ -1,26 +1,26 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { actions } from '~/redux/reducers/jobSlice';
-import { Doughnut } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto';
 
 import classNames from 'classnames/bind';
-import styles from './LocationAnalysis.module.scss';
+import styles from './ItAnalysis.module.scss';
 
 import CustomButton from '~/components/CustomButton';
 import Container from 'react-bootstrap/Container';
 import Loading from '~/components/Loading';
-import { analyzeLoadingState$, analyzeDataState$ } from '~/redux/selectors';
+import { itLoadingState$, itDataState$ } from '~/redux/selectors';
 
-import { analyzeLocation } from '~/analyzeData';
+import { analyzeIt } from '~/analyzeData';
 
 const cx = classNames.bind(styles);
 
-function LocationAnalysis() {
+function ItAnalysis() {
     const [crawl, setCrawl] = useState(false);
     const [chartData, setChartData] = useState({});
-    const isLoading = useSelector(analyzeLoadingState$);
-    const data = useSelector(analyzeDataState$);
+    const isLoading = useSelector(itLoadingState$);
+    const data = useSelector(itDataState$);
     const dispatch = useDispatch();
 
     const isEmptyData = useMemo(() => {
@@ -29,13 +29,13 @@ function LocationAnalysis() {
 
     useEffect(() => {
         if (crawl) {
-            dispatch(actions.getAllJobsRequest());
             setCrawl(false);
+            dispatch(actions.getAllItRequest());
         }
     }, [crawl, dispatch]);
 
     useEffect(() => {
-        setChartData(analyzeLocation(data));
+        setChartData(analyzeIt(data));
     }, [data]);
 
     const handleCrawlData = () => {
@@ -54,9 +54,9 @@ function LocationAnalysis() {
             <div className={cx('wrapper-content')}>
                 {!isEmptyData && (
                     <>
-                        <h3 className="text-center mb-4">Phân tích dựa trên khu vực tuyển dụng</h3>
+                        <h3 className="text-center mb-4">Analysis IT market based on skills</h3>
                         <div className={cx('canvas-container')}>
-                            <Doughnut
+                            <Bar
                                 data={chartData}
                                 options={{
                                     maintainAspectRatio: false,
@@ -70,4 +70,4 @@ function LocationAnalysis() {
     );
 }
 
-export default LocationAnalysis;
+export default ItAnalysis;

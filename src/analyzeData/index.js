@@ -73,3 +73,25 @@ export const analyzeJob = (data) => {
         return { labels, datasets };
     } else return {};
 };
+
+export const analyzeIt = (data) => {
+    if (data.length) {
+        const labels = [];
+        const datas = [];
+        const backgroundColor = [];
+        data.forEach((skill) => {
+            const { name, amount } = skill;
+            labels.push(name);
+            datas.push(amount);
+            backgroundColor.push('#' + Math.floor(Math.random() * 16777215).toString(16));
+        });
+        const datasets = [
+            {
+                label: 'Quantity',
+                data: datas,
+                backgroundColor,
+            },
+        ];
+        return { labels, datasets };
+    } else return {};
+};

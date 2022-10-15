@@ -26,6 +26,16 @@ export const jobSlice = createSlice({
         getAllJobsFailure: (state, action) => {
             state.analyzeLoading = false;
         },
+        getAllItRequest: (state) => {
+            state.itLoading = true;
+        },
+        getAllItSuccess: (state, action) => {
+            state.itLoading = false;
+            state.itData = action.payload;
+        },
+        getAllItFailure: (state, action) => {
+            state.itLoading = false;
+        },
         getSearchJobsRequest: (state) => {
             state.isLoading = true;
         },

@@ -37,6 +37,9 @@ function SideBarCanvas({ className }) {
                     <NavLink to={routes.jobAnalysis} className={cx('link')} onClick={handleClose}>
                         <span className={cx('item')}>Công việc</span>
                     </NavLink>
+                    <NavLink to={routes.itAnalysis} className={cx('link')} onClick={handleClose}>
+                        <span className={cx('item')}>IT</span>
+                    </NavLink>
                 </div>
             </Offcanvas>
         </div>

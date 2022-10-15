@@ -28,16 +28,18 @@ function CareerAnalysis() {
     return (
         <Container>
             <div className={cx('wrapper-content')}>
-                <h3 className="text-center mb-4">Phân tích dựa trên công việc tuyển dụng</h3>
                 {!isEmptyData && (
-                    <div className={cx('canvas-container')}>
-                        <Line
-                            data={chartData}
-                            options={{
-                                maintainAspectRatio: false,
-                            }}
-                        />
-                    </div>
+                    <>
+                        <h3 className="text-center mb-4">Phân tích dựa trên công việc tuyển dụng</h3>
+                        <div className={cx('canvas-container')}>
+                            <Line
+                                data={chartData}
+                                options={{
+                                    maintainAspectRatio: false,
+                                }}
+                            />
+                        </div>
+                    </>
                 )}
             </div>
         </Container>

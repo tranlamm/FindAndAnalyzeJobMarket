@@ -5,6 +5,7 @@ import AnalysisLayout from '~/layouts/AnalysisLayout';
 import MainAnalysis from '~/pages/Analysis/LocationAnalysis';
 import CareerAnalysis from '~/pages/Analysis/CareerAnalysis';
 import JobAnalysis from '~/pages/Analysis/JobAnalysis';
+import ItAnalysis from '~/pages/Analysis/ItAnalysis';
 
 const allRoutes = [
     { path: routes.welcome, element: Welcome, layout: null },
@@ -12,6 +13,7 @@ const allRoutes = [
     { path: routes.locationAnalysis, element: MainAnalysis, layout: AnalysisLayout },
     { path: routes.careerAnalysis, element: CareerAnalysis, layout: AnalysisLayout },
     { path: routes.jobAnalysis, element: JobAnalysis, layout: AnalysisLayout },
+    { path: routes.itAnalysis, element: ItAnalysis, layout: AnalysisLayout },
 ];
 
 export default allRoutes;

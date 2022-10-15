@@ -2,6 +2,15 @@ import { call, put, takeLatest } from 'redux-saga/effects';
 import * as api from '~/api';
 import { actions } from '~/redux/reducers/jobSlice';
 
+function* fetchAllItSaga() {
+    try {
+        const { data } = yield call(api.fetchAllIt);
+        yield put(actions.getAllItSuccess(data));
+    } catch (error) {
+        yield put(actions.getAllItFailure(error));
+    }
+}
+
 function* fetchAllJobsSaga() {
     try {
         const { data } = yield call(api.fetchAllJobs);
@@ -33,6 +42,7 @@ function* rootSaga() {
     yield takeLatest(actions.getJobsRequest, fetchJobsSaga);
     yield takeLatest(actions.getAllJobsRequest, fetchAllJobsSaga);
     yield takeLatest(actions.getSearchJobsRequest, fetchSearchJobsSaga);
+    yield takeLatest(actions.getAllItRequest, fetchAllItSaga);
 }
 
 export default rootSaga;

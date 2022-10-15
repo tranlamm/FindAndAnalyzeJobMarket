@@ -15,7 +15,7 @@ const rootPersistConfig = {
     key: 'root',
     storage,
     stateReconciler: autoMergeLevel2,
-    whitelist: ['allData'],
+    whitelist: ['allData', 'itData'],
 };
 
 const persistedReducer = persistReducer(rootPersistConfig, jobReducer);

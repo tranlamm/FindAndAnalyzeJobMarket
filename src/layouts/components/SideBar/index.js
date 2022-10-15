@@ -19,6 +19,9 @@ function SideBar() {
                 <NavLink className={cx('item')} to={routes.jobAnalysis}>
                     <span className={cx('item-text')}>Công việc</span>
                 </NavLink>
+                <NavLink className={cx('item')} to={routes.itAnalysis}>
+                    <span className={cx('item-text')}>IT</span>
+                </NavLink>
             </ul>
         </div>
     );
