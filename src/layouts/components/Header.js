@@ -7,13 +7,7 @@ import routes from '~/configs/routes';
 
 function Header() {
     return (
-        <Navbar
-            bg="dark"
-            expand="md"
-            variant="dark"
-            fixed="top"
-            style={{ backgroundImage: 'linear-gradient(to bottom, #141e30, #243b55)', height: '60px' }}
-        >
+        <Navbar bg="dark" expand="md" variant="dark" fixed="top">
             <Container>
                 <Navbar.Brand as={NavLink} to={routes.welcome}>
                     Job App Demo

@@ -17,7 +17,7 @@ function Welcome() {
 
     return (
         <Carousel activeIndex={index} onSelect={handleSelect}>
-            <Carousel.Item interval={2000}>
+            <Carousel.Item interval={20000}>
                 <img
                     className={cx('img')}
                     src="https://res.cloudinary.com/practicaldev/image/fetch/s--F7w_snYb--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vda3askm2sbfjl717q9q.png"
